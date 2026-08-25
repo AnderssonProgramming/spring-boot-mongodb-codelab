@@ -7,6 +7,7 @@ import com.codelab.mongodb.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -21,6 +22,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product create(Product product) {
+        product.setCreatedAt(LocalDateTime.now());
         return productRepository.save(product);
     }
 

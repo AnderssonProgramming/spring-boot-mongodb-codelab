@@ -34,14 +34,6 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, String description, BigDecimal price, Integer stockQuantity) {
-        this.name = name;
-        this.description = description;
-        this.price = price;
-        this.stockQuantity = stockQuantity;
-        this.createdAt = LocalDateTime.now();
-    }
-
     public String getId() {
         return id;
     }
